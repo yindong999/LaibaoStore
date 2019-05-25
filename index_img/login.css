@@ -1,0 +1,400 @@
+﻿body{font-family:"微软雅黑",arial;margin:0;padding:0;background:#fff;font-size: 12px;line-height: 1.7;}
+div,form,img,ul,ol,li,dl,dt,dd{margin:0;padding:0;border:0;}li{list-style-type:none;}
+img{vertical-align:top;border:none;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}
+a:link{text-decoration:none;}a:visited{text-decoration:none;}
+a:active{color:#bc2931;}
+input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill{-webkit-box-shadow:0 0 0px 1000px white inset;z-index:6}/*有下拉信息时不显示黄色*/
+.head{width:1150px;margin:0 auto;height:100px; background:#fff;}
+.hleft{ float:left;}
+.logo{margin-top:24px; display:block;}
+.hright{ margin-top:30px; float:right; width:320px; height:35px;font-size:16px; border-radius:5px; border:1px solid #e2e2e2; }
+.zaixianzixun{ margin:5px 0; padding:0 25px; float:left; width:93px; height:25px;border-right:1px solid #adadac;color:#f1312e; }
+.kefutouxiang{ width:23px; height:25px; float:left; background:url(/image/login/icon.png) -6px -34px no-repeat;}
+.zaixianzixuna{ float:left; margin-left:5px; line-height:25px; color:#f1312e;}
+.dianhua{margin:5px 0; padding:0 20px; float:left;  width:136px; height:25px;}
+.teltouxiang{ width:23px; height:25px; float:left; background:url(/image/login/icon.png) -48px -35px no-repeat;}
+.tel{margin-left:5px; line-height:25px; color:#000;}
+.center{ width:100%; height:586px; background:url(/image/login/beijing.jpg) 50% 50% no-repeat;}
+.mainparentdiv{width:1150px;margin:0 auto; height:402px;}
+.accountlogin{ margin-top:80px; float:right; width:350px; height:402px; background:#fff;}
+.accountlogintop{ width:100%; height:68px; font-size:18px; color:#7f7f7f;border-bottom:1px solid #f4f4f4;}
+.accountlogintop>div{ cursor:pointer;}
+.accounttext{ margin-top:25px; float:left; padding:0px 50px; height:20px; line-height:18px; border-right:2px solid #adadac;}
+.yanzhengmatext{margin-top:25px; float:left;padding:0px 40px; height:20px;line-height:18px; }
+.accountlogincenter{width:100%; height:237px; font-size:18px; color:#7f7f7f;border-bottom:1px solid #f4f4f4;}
+.accountlogincenter>div{ margin-left:25px;width:300px;}
+.error{ margin-top:15px;width:300px;  height:22px; border:1px solid #faccc6; font-size:13px;  background:#ffebeb; display:block;}
+.errorimg{ margin:4px 12px 0 10px ; float:left; width:16px; height:16px; background:url(/image/login/icon.png) -111px -9px no-repeat;}
+.errortext{ line-height:22px;color:#e4393c;}
+.errortext a{color:#0168b7;}
+.zhanghao{position: relative; margin-top:10px;width:300px; height:40px;border: 1px solid #bdbdbd;border-radius:2px;}
+.inputimg{width:40px; height:40px;position: absolute; z-index: 3;top: 0px; left: 0;background:#dddddd url(/image/login/zhanghao.png) 11px 9px no-repeat;}
+.inputusername{line-height: 18px;height: 18px;padding: 11px 0 11px 50px; width: 250px;float: none;overflow: hidden;font-size: 14px; border:none;}
+.passworddiv{ margin-top:24px;}
+.pwdimg{background:#dddddd url(/image/login/mima.png) 11px 9px no-repeat;}
+.jizhupwd{ padding:20px 0;  font-size:12px; color:#999999; line-height:14px;}
+.xuanfangshi{ color:#e4393c;}
+/*验证码登录*/
+.yanzhengmadiv{ margin-bottom:20px;}
+.phoneimg{width:40px; height:40px;position: absolute; z-index: 3;top: 0px; left: 0;background:#dddddd url(/image/login/icon.png) -84px -27px no-repeat;}
+.inputyzm{line-height: 18px;height: 18px;padding: 11px 0 11px 9px; width:130px;float: none;overflow: hidden;font-size: 14px; border:none;}
+.getyanzhengma{ margin-top:5px; padding-left:38px;line-height:24px; height:27px; border-left:1px solid #cbcbcb; display:inline-block;  font-size:15px;}
+.getyanzhengma:link,.getyanzhengma:visited{color:#999999;}
+.yzmwangjipwd:visited,.yzmwangjipwd:link{ float:left;margin-right: 4px;font-size: 12px;color: #666;line-height: 16px; display:none;}
+.jizhuanniu{ float:left;display:none;}
+.changecheckbox {position: relative;display: inline-block;float: left;}
+
+/*
+.changecheckbox input {position: absolute;left: 0; top:-4px;width: 100%;height: 100%;z-index: 5;opacity: 0;cursor: pointer;}
+
+.changecheckbox label { width: 30px; height: 17px;background: #ccc; position: relative;display: inline-block; border-radius: 46px; -webkit-transition: 0.4s; transition: 0.4s; top:0px;}
+.changecheckbox input:checked + label {background: #ff8587;}
+.changecheckbox label:after {content: '';position: absolute;width: 18px; height: 18px; border-radius: 100%;left: 17px;top: -1px;z-index: 2;background: #fff;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);-webkit-transition: 0.4s;transition: 0.4s;}
+*/
+/**头部切换按钮*/
+.change_button{ display:none; }
+
+.changecheckbox {
+    position: relative;
+    display: inline-block;
+}
+
+.changecheckbox:after, .changecheckbox:before {
+        font-family: FontAwesome;
+        -webkit-font-feature-settings: normal;
+        -moz-font-feature-settings: normal;
+        font-feature-settings: normal;
+        -webkit-font-kerning: auto;
+        -moz-font-kerning: auto;
+        font-kerning: auto;
+        -webkit-font-language-override: normal;
+        -moz-font-language-override: normal;
+        font-language-override: normal;
+        font-stretch: normal;
+        font-style: normal;
+        font-synthesis: weight style;
+        font-variant: normal;
+        font-weight: normal;
+        text-rendering: auto;
+    }
+
+    .changecheckbox label {
+       width: 30px; height: 17px;
+        background: #ccc;
+        position: relative;
+        display: inline-block;
+        border-radius: 46px;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        top:-2px;
+    }
+
+        .changecheckbox label:after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 100%;
+            left: 0;
+            top: -1px;
+            z-index: 2;
+            background: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+
+    .changecheckbox input {
+        position: absolute;
+        left: 0;
+        top: -5px;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .changecheckbox input:hover + label:after {
+        box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+    }
+ .changecheckbox input:checked + label:after {left: 18px;}
+   
+.model-1{ float:left; margin-right:10px; }
+.model-1 .changecheckbox input:checked + label {
+    background: #0000FF;
+    border:1px solid #0000FF;
+    height:16px;
+   
+}
+ .model-1 .changecheckbox input:checked + label:after {
+        /**background: #4285F4;*/
+      }
+/**end*/
+
+
+
+.jizhutext{ float:left; margin-left:2px;}
+.wangjipwddiv{ float:right; }
+.wangjipwd:visited,.wangjipwd:link {font-size:13px;}
+.accountlogincenter .denglu1{ clear:both; margin-top:7px;width:300px;height:36px;font-size:18px;text-align:center; line-height:36px; color:#FFF; background:#0068b7; border-radius:5px; border:1px solid #0068b7; cursor:pointer;}
+.accountloginbottom{ height:48px;background:#fff;text-align:center;padding-top:10px;}
+.disanfang{ margin:15px 0; padding:0 14px;width:46px; height:18px; float:left; }
+.qqlogin{ border-right:1px solid #d5ccd5;}
+.qqimg{ margin-top:1px; float:left; width:18px; height:18px;background:url(/image/login/icon.png) -13px -6px no-repeat;}
+.qqtext:link,.qqtext:visited{ float:left;font-size:12px; color:#666;}
+.qqtext span,.wxtext span{ margin-left:4px; }
+.wximg{margin-top:1px; float:left; width:18px; height:18px;background:url(/image/login/icon.png) -80px -6px no-repeat;}
+.wxtext:link,.wxtext:visited{ float:left;font-size:12px; color:#666;}
+.lijizhuce{ float:right;margin:17px 0;padding:0 22px;}
+.lijizhuceimg{float:left; width:16px; height:16px;background:url(/image/login/icon.png) -136px -9px no-repeat;}
+.lijizhucetext:link,.lijizhucetext:visited{ float:left; margin-left:4px; font-size:13px;  line-height:16px;}
+/**下面部分安全保障*/
+.foot-nav{ width:100%; height:104px; overflow:hidden; background-color:#eaeaea; }
+.foot-nav ul{ width:1210px; height:68px; overflow:hidden; margin:20px auto;}
+.foot-nav ul li{ float:left; width:220px; overflow:hidden; margin-left:20px; height:68px; display:inline;}
+.foot-nav .foot-item1 i{ background-image:url(/images/indexnew/gouwu.png); display:block; width:220px; height:68px; background-repeat:no-repeat;}
+.lab_service{ height:68px; width:155px; overflow:hidden; position:relative; margin:0px auto; padding-left:45px;}
+.foot-item .lab_service h5{ position:absolute; width:38px; height:43px; overflow:hidden; background-image:url(/images/pc/index/indexstyle.png); background-repeat:no-repeat; left:0; top:14px;}
+.foot-item .lab_service h5 p{margin:0 0 0 0;}
+.foot-item .lab_service .lab_service_txt{ height:68px; width:100%; overflow:hidden; display:block;font-weight: 700;text-overflow: ellipsis;white-space: nowrap;color: #444; height:68px; line-height:34px; font-size:18px; font-family:微软雅黑;}
+/**宽屏首页底部样式*/
+.kefu{ display:none;}
+.foot {TEXT-ALIGN: center;PADDING-BOTTOM: 10px; LINE-HEIGHT: 22px;PADDING-LEFT: 0px;PADDING-RIGHT: 0px; PADDING-TOP: 10px;}
+.foot .links a {margin: 0 20px; }
+.foot a {color: #666 }
+ .foot p {TEXT-ALIGN: center;}
+.bottom-2016 {width: 1210px;height: 125px; overflow: hidden;border-bottom: 1px solid #e4e4e4;margin: 0px auto;}
+.footcon {width: 1100px;height: 95px;margin: 15px auto;overflow: hidden; padding-left: 180px;}
+.footcon .botcon1 { float: left;width: 250px;height: 95px;overflow: hidden;}
+.footcon .botcon2 {float: left; width: 250px; height: 95px; overflow: hidden;}
+.footcon .botcon3 { float: left;width: 250px;height: 95px;overflow: hidden;}
+.footcon .botcon4 {float: left;width: 250px; height: 95px;overflow: hidden; }
+.footcon .b_title {font: 400 16px/24px "microsoft yahei"; color: #666; }
+.footcon .b_con a {color: #666;}
+.footcon .b_con a:hover {color: #FF5B01;text-decoration: none;}
+.links a{color: #666;}
+/*弹出登录注册*/
+.box{ border:none;}
+.accountlogin { float:none;margin-top:0;}
+.boxTitle {
+    position: relative;
+   border:none; background:none;
+    height:5px;
+    line-height: 30px;
+     z-index:2;
+}
+.boxTitle span {
+    position: absolute;
+    width: 15px;
+    /*background: url(../images/close1.png)*/;
+    text-indent: -10em;
+    right: 0px;
+    top: 0px;
+    height: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index:2;
+}
+.boxTitle span.hover 
+{
+    /*background: url(../images/close1.png) ;*/
+}
+.boxContent{ border:none; overflow:hidden;}
+.accounttext 
+{
+    /*width:100px;*/
+    margin-left:100px;
+    margin-top: 25px;
+    padding: 0px 50px;
+    height: 20px;
+    line-height: 18px;
+    border-right:none; 
+}
+.radio{width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: solid 1px #dddddd;
+    -webkit-border-radius: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    outline:none;
+    cursor: default;
+    -webkit-appearance: none;
+    -webkit-user-select: text;
+            user-select: text;
+    -webkit-transition: background-color ease 0.1s;
+            transition: background-color ease 0.1s;}
+.radio:checked{
+    background-color: #03a9f4;
+    border: solid 1px #03a9f4;
+    text-align: center;
+    background-clip: padding-box;
+}
+.radio:checked:before {
+    content: '';
+    width: 9px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -3px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-top: none;
+    border-right: none;
+    z-index: 2;
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+
+.jizhutext a.pdl {
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+}
+
+.jizhutext a.pdl b {
+    width: 19px;
+    height: 18px;
+    display: block;
+    background: url(/images/QQ-weixin.png) no-repeat;
+    margin: 0 auto;
+    position: absolute;
+    float: left;
+    left: 0;
+}
+
+.jizhutext a.pdl b.QQ-icon {
+    background-position: 0 0;
+}
+
+.jizhutext .line {
+    color: #ccc;
+    padding: 0 2px;
+}
+
+.jizhutext a.pdl b.weixin-icon {
+    background-position: -20px 0;
+}
+
+
+.other a.pdl {
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+}
+.other a.pdl b {
+    width: 19px;
+    height: 18px;
+    display: block;
+    background: url(/images/QQ-weixin.png) no-repeat;
+    margin: 0 auto;
+    position: absolute;
+    float: left;
+    left: 0;
+}
+.other a.pdl b.QQ-icon {
+    background-position: 0 0;
+}
+.other a.pdl b.weixin-icon {
+    background-position: -20px 0;
+}
+/**/
+ .zhanghao .area-select {
+    position: absolute;
+    margin-left: 5px;
+    height: 40px;
+    line-height: 40px;
+    width: 90px;
+    z-index: 2;
+    font-size: 15px;
+    cursor: pointer;
+    border-right: 1px solid #f4f4f4;
+}
+ .zhanghao span {
+    padding: 19px 0;
+}
+ .zhanghao .SmsMobile {
+    outline-style: none;
+    background: #fff;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: 36px;
+    padding-left: 15px;
+    border: 1px solid #e4e4e4;
+    width: 198px;
+}
+
+.zhanghao .pl130P {
+    padding-left: 100px !important;
+}
+.zhanghao .sendcode {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    background-image: none;
+    white-space: nowrap;
+    padding: 4px 13px 5px;
+    line-height: 1.42857143;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    color: #0979e9;
+    color: #0979e9;
+    background-color: #d5e9ff;
+    -webkit-appearance: button;
+    cursor: pointer;
+    width: 151px;
+    font-size: 14px;
+    float: right;
+    border-color: #d9f1ff!important;
+    height: 38px;
+    padding-left: 15px;
+    border: 1px solid #e4e4e4;
+}
+
+.zhanghao .validatecode {
+    outline-style: none;
+    background: #fff;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 132px;
+    float: left;
+    height: 36px;
+    padding-left: 15px;
+    border: 1px solid #e4e4e4;
+}
+
+.zhanghao .form-control:focus {
+    border: 1px solid #086cd0;
+    outline:none;
+     -webkit-transition: all 0.6s ease-in;
+    -moz-transition: all 0.6s ease-in;
+    -ms-transition: all 0.6s ease-in;
+    -o-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
+}
+/*手机验证弹窗框*/
+.accountlogintop a{margin-left: 34px;padding-top:10px;}
+.solid1{border:0.5px solid #666;width:100px;float:left;margin-left:24px;color: #7f7f7f;}
+.solid2{width:100px;float:left;line-height: 3px;font-size: 16px;color: #7f7f7f;}
+.solid3{border:0.5px solid;width:100px;float:left;color: #7f7f7f;}
+.other{margin-top: 26px;}
+.QQ{float: left;width: 36px;margin-left:104px;}
+.vx{float: left;width: 36px;margin-left:60px;}

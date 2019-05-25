@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+html{
+    width:100%;
+    overflow-x:auto;
+}
+.head {
+    padding-top: 24px;
+    padding-bottom: 16px;
+    margin:0;
+}
+
+.head img {
+    margin-left: 110px;
+}
+
+.head>.head_ul {
+    width: 320px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 8px 100px 0 0;
+}
+
+.head>.head_ul li {
+   
+    list-style-type: none;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    margin-top: 5px;
+   
+}
+
+.head>.head_ul li:nth-of-type(1) {
+    padding: 0 25px;
+    border-right: 1px solid #ccc;
+}
+
+.head>.head_ul li:nth-of-type(1) .zixun {
+    /* background:url(../img/) */
+}
+
+.head>.head_ul li:nth-of-type(2) {
+    padding: 0 20px;
+}
+
+.banner {
+    height: 480px;
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+
+.banner>a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    float: left;
+    position: absolute;
+    background: url(../login_img/bj1.jpg) center center no-repeat;
+}
+
+.banner ul {
+    position: absolute;
+    z-index: 20px;
+    left: 50%;
+    top: 90%;
+    margin-left: -45px;
+}
+
+.banner ul li {
+    height: 10px;
+    width: 40px;
+    background: #dbe9fc;
+    float: left;
+    list-style-type: none;
+    
+}
+.banner ul li:nth-child(1){
+    margin-right:10px;
+}
+.banner ul li>a{
+    display:block;width:100%;height:100%;
+}
+/* 底部的五大保障 */
+.bott_safeguard {
+    /* padding:0;margin:0; */
+    background: #eaeaea;
+    padding: 0;
+    width: 100%;
+    height: 105px;
+    /* overflow:hidden; */
+}
+.bott_safeguard ul {
+    height: 105px;
+    margin-left: 100px;
+   
+}
+.bott_safeguard ul li {
+    list-style-type: none;
+    float: left;
+    line-height: 105px;
+}
+.bott_safeguard ul li div {
+    padding: 0 10px;
+    margin-right:60px;
+}
+.bott_safeguard ul li div img {
+    width: 36px;
+    height: 43px;
+    border: none;
+}
+.bott_safeguard ul li div span {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #444444;
+    margin-left: 9px;
+}
+/* 底部——上面的导航 */
+.foot_top{
+    position:relative;
+}
+.foot_top ul li{
+    list-style-type:none;
+    float:left;
+    width:74px;
+    font-size:14px; 
+    text-align:center;
+}
+.foot_top ul li~li{
+    border-left:1px solid black;
+}
+ 
+/* 底部——中部的导航 */
+.foot_center{
+    position:relative;
+}
+.foot_center>ul{
+    position:absolute;
+    top:0;right:0;bottom:0;left:0;
+    margin:0 auto;
+}
+.foot_center ul li{
+    list-style-type:none;
+    font-size:14px; 
+}
+/* 底部——下面的导航 */
+.foot_bottom{
+    position:relative;
+}
+.foot_bottom section{
+    position:absolute;
+    top:0;right:0;bottom:0;left:0;
+    margin:0 auto;
+}
+ 

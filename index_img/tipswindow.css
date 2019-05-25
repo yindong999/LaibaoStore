@@ -1,0 +1,156 @@
+﻿body {
+}
+
+/*-----------------弹出窗口的页面------------------*/
+#boxBg {
+	filter:alpha(opacity=50);
+	opacity:0.5;
+	background:#000;
+}
+.box {
+	border:3px solid #E9F3FD;
+	background:#fff;
+}
+.boxLoading,.boxError {
+	position: absolute;
+	display: block;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: -45px; 
+	margin-top: -15px;
+	left: 50%;
+	top: 50%;
+	color: #f00;
+}
+.boxLoading{
+	width:28px;
+	margin-left: -14px;
+	background:url(../images/tanceng/loading.gif) no-repeat;
+	text-indent: -999em;
+	text-align: center;
+}
+.boxTitle {
+	position: relative;
+	border: 1px solid #A6C9E1;
+	background: url(../images/tanceng/ico.png) 0 0 repeat-x;
+	height: 30px;
+	line-height:30px;
+}
+.boxTitle h3 
+{
+	position: absolute;
+	font-weight: bold;
+	left: 10px;
+	height: 20px;
+	color: #666;
+	font-size: 14px;
+}
+.boxTitle span {
+	position: absolute;
+	width: 10px;
+    background: url(../images/tanceng/ico.png) -80px -40px no-repeat;
+	text-indent: -10em;
+	right: 10px;
+	top: 10px;
+	height: 16px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.boxTitle span.hover 
+{
+    background: url(../images/tanceng/ico.png) -90px -40px no-repeat;
+}
+.boxContent {
+	position: relative;
+	padding:0px;
+	border: 1px solid #A6C9E1;
+	border-top: none;
+	text-align: center;
+	overflow: auto;
+}
+.shadow {
+	box-shadow:3px 3px 5px #bfbfbf;
+	-moz-box-shadow: 3px 3px 5px #bfbfbf;
+	-webkit-box-shadow:3px 3px 5px #bfbfbf;
+}
+
+/*-------------弹出窗口结束-------------------*/
+
+/*-------------弹出窗口新版（邢振斌 2016-9-28）-------------------*/
+ #boxBg {
+	filter:alpha(opacity=50);
+	opacity:0.5;
+	background:#000;
+}
+.box {
+	border:2px solid #0168B7;
+	background:#fff;
+}
+.boxLoading,.boxError {
+	position: absolute;
+	display: block;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: -45px; 
+	margin-top: -15px;
+	left: 50%;
+	top: 50%;
+	color: #f00;
+}
+.boxLoading{
+	width:28px;
+	margin-left: -14px;
+	background:url(../images/tanceng/loading.gif) no-repeat;
+	text-indent: -999em;
+	text-align: center;
+}
+.boxTitle {
+	position: relative;
+	border: 0px solid #A6C9E1;
+	background:url();
+	background-color:#0168B7;
+	height: 30px;
+	line-height:30px;
+}
+.boxTitle h3 
+{
+	position: absolute;
+	font-weight: bold;
+	left: 10px;
+	height: 20px;
+	color: #fff;
+	font-size: 14px;
+}
+.boxTitle span {
+	position: absolute;
+	width: 15px;
+    background: url(../images/close1.png) ;
+	text-indent: -10em;
+	right: 10px;
+	top: 7px;
+	height: 15px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.boxTitle span.hover 
+{
+    background: url(../images/close1.png) ;
+}
+.boxContent {
+	position: relative;
+	padding:0px;
+	border: 1px solid #F1F1F1;
+	border-top: none;
+	border-bottom: 2px solid #F1F1F1;
+	text-align: center;
+	overflow: auto;
+	background-color:#F1F1F1;
+}
+.shadow {
+	box-shadow:3px 3px 5px #bfbfbf;
+	-moz-box-shadow: 3px 3px 5px #bfbfbf;
+	-webkit-box-shadow:3px 3px 5px #bfbfbf;
+}
+/*-------------弹出窗口新版结束-------------------*/
